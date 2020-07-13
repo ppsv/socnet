@@ -19,8 +19,6 @@ const Navbar = () => {
         <div className={s.item}>
             <NavLink to='/setting'>Setting</NavLink>
         </div>
-
-
     </nav>
 }
 
