@@ -4,7 +4,7 @@ import s from './Setting.module.css';
 const Setting = () => {
     return (
         <div className={s.item}>
-            Music
+            Setting
         </div>
     )
 }
