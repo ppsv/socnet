@@ -3,6 +3,7 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
+    let posts = []
     return <div className={s.postsBlock}>
         <h2>MyPosts</h2>
         <div>
