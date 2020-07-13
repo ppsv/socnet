@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import Setting from "./components/Navbar/Setting";
+import Setting from "./components/Navbar/Setting/Setting";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import Music from "./components/Navbar/Music/Music";
 import News from "./components/Navbar/News/News";
-import Navbar from "./components/Navbar/Setting/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 
 const App = () => {
@@ -16,7 +16,6 @@ const App = () => {
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
-
                 <div className='app-wrapper-content'>
                     <Route path='/profile' component={Profile}/>
                     <Route path='/dialogs' component={Dialogs}/>
@@ -25,7 +24,6 @@ const App = () => {
                     <Route path='/setting' component={Setting}/>
 
                 </div>
-                {/*<Profile/>*/}
             </div>
         </BrowserRouter>
 
