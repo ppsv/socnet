@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import state from './redux/state';
-
+import addPostToState from './redux/state';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state}/>
+    <App state={state} addPostToState={addPostToState}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

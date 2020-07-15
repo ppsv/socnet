@@ -10,6 +10,7 @@ const MyPosts = (props) => {
 
     let addPost =() => {
         let text =newPostEl.current.value;
+        props.addPostToState(text);
         alert(text);
     }
 
