@@ -1,8 +1,22 @@
 import * as serviceWorker from './serviceWorker';
-import {rerenderEntireTree} from "./Render";
-import state from "./redux/state";
+import state, {subscriber} from "./redux/state";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import {addPostToState} from './redux/state';
 
 
+
+let rerenderEntireTree = (state) => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App state={state} addPostToState={addPostToState}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+subscriber(rerenderEntireTree);
 rerenderEntireTree(state);
 
 
